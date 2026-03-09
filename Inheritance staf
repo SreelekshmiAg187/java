@@ -1,0 +1,46 @@
+class Employee
+{
+    int empid;
+    String name;
+
+    void getEmployee(int id, String n)
+    {
+        empid = id;
+        name = n;
+    }
+
+    void displayEmployee()
+    {
+        System.out.println("Employee ID: " + empid);
+        System.out.println("Name: " + name);
+    }
+}
+
+class Staff extends Employee
+{
+    String department;
+
+    void getStaff(String d)
+    {
+        department = d;
+    }
+
+    void displayStaff()
+    {
+        System.out.println("Department: " + department);
+    }
+}
+
+public class Main
+{
+    public static void main(String args[])
+    {
+        Staff s = new Staff();
+
+        s.getEmployee(101, "Anu");
+        s.getStaff("HR");
+
+        s.displayEmployee();
+        s.displayStaff();
+    }
+}
